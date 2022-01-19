@@ -1,6 +1,7 @@
 #include<stdio.h>
 
-
+// Create main procedure wich executes the program. Necessary in all C projects.
+// Normal to have a main.c source file containing main().
 int main(){
 
     int count = 11;     // init count to 11.
