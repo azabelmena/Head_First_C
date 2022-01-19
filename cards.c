@@ -13,33 +13,6 @@ int main(){
 
     int val = 0; // initialize the card value to 0.
 
-    /*if(card[0] == 'J'){ // If Joker, King, or Queen, set val to 10.*/
-        /*val = 10;*/
-    /*}*/
-    /*else if(card[0] == 'K'){*/
-        /*val = 10;*/
-    /*}*/
-    /*else if(card[0] == 'Q'){*/
-        /*val = 10;*/
-    /*}*/
-    /*else if(card[0] == 'A'){ // else if Ace, set value to 1 (or 11).*/
-        /*val = 1;*/
-    /*}*/
-    /*else{*/
-        /*val = atoi(card); //else, return the card value.*/
-    /*}*/
-
-    /*
-     * One line conditionals of the form:
-     * if(condition)
-     *     statement;
-     *
-     * are valid and can be used without braces, however its much cleaner using
-     * if statements with braces all the time.
-     * */
-
-    // Alternatively:
-
     // Switch statements are neat but should be avoided unless the it is obvious
     // the program would benefit from it (such as this one). Switch statements
     // can always be brought into if/else statements.
@@ -56,6 +29,7 @@ int main(){
         case 'K':
 
         case 'Q':
+
             val = 10;
 
             break;
@@ -65,6 +39,16 @@ int main(){
     }
 
     printf("The value of our card is %d\n", val);
+
+    int count = 0; // initialize count.
+    if(val >= 3 && val <= 6){
+        count++;
+    }
+    else if(val == 10){
+        count--;
+    }
+
+    printf("Your count is %d.\n", count);
 
     return 0;
 }
