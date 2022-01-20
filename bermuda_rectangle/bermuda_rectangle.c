@@ -1,56 +1,40 @@
 #include"bermuda_rectangle.h"
 #include<stdio.h>
 
-struct pos go_north(struct pos position){
-    position.y++;
-
-    return position;
+void go_north(struct pos* position){
+    position->y++;
+}
+void go_north_west(struct pos* position){
+    position->x--;
+    position->y++;
 }
 
-struct pos go_north_west(struct pos position){
-    position.x--;
-    position.y++;
 
-    return position;
+void go_west(struct pos* position){
+    position->x--;
+}
+void go_south_west(struct pos* position){
+    position->x--;
+    position->y--;
 }
 
-struct pos go_west(struct pos position){
-    position.x--;
 
-    return position;
+void go_south(struct pos* position){
+    position->y--;
+}
+void go_south_east(struct pos* position){
+    position->x++;
+    position->y--;
 }
 
-struct pos go_south_west(struct pos position){
-    position.x--;
-    position.y--;
 
-    return position;
+void go_east(struct pos* position){
+    position->x++;
+
 }
-
-struct pos go_south(struct pos position){
-    position.y--;
-
-    return position;
-}
-
-struct pos go_south_east(struct pos position){
-    position.x++;
-    position.y--;
-
-    return position;
-}
-
-struct pos go_east(struct pos position){
-    position.x++;
-
-    return position;
-}
-
-struct pos go_north_east(struct pos position){
-    position.x++;
-    position.y++;
-
-    return position;
+void go_north_east(struct pos* position){
+    position->x++;
+    position->y++;
 }
 
 // Returns the compass direction given the position.
