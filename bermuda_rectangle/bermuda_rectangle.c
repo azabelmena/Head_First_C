@@ -1,36 +1,94 @@
 #include"bermuda_rectangle.h"
 #include<stdio.h>
 
+struct pos go_north(struct pos position){
+    position.y++;
 
-int go_north(int lat, int lon){                     // move north.
-    return 0;
+    return position;
 }
-int go_north_west(int lat, int lon){                // move north-west.
-    return 0;
+
+struct pos go_north_west(struct pos position){
+    position.x--;
+    position.y++;
+
+    return position;
 }
-int go_west(int lat, int lon){                      // move west.
-    return 0;
+
+struct pos go_west(struct pos position){
+    position.x--;
+
+    return position;
 }
-int go_south_west(int lat, int lon){                // move south-west.
-    return 0;
+
+struct pos go_south_west(struct pos position){
+    position.x--;
+    position.y--;
+
+    return position;
 }
-int go_south(int lat, int lon){                     // move south.
-    return 0;
+
+struct pos go_south(struct pos position){
+    position.y--;
+
+    return position;
 }
-int go_south_east(int lat, int lon){                // move south-east.
-    return 0;
+
+struct pos go_south_east(struct pos position){
+    position.x++;
+    position.y--;
+
+    return position;
 }
-int go_east(int lat, int lon){                      // move east.
-    return 0;
+
+struct pos go_east(struct pos position){
+    position.x++;
+
+    return position;
 }
-int go_north_east(int lat, int lon){                // move north-east.
-    return 0;
+
+struct pos go_north_east(struct pos position){
+    position.x++;
+    position.y++;
+
+    return position;
+}
+
+// Returns the compass direction given the position.
+char *get_direction(struct pos position){
+    if(position.x == 0 && position.y == 0){
+        return "Center";
+    }
+    else if(position.x == 0 && position.y > 0){
+        return "North";
+    }
+    else if(position.x < 0 && position.y > 0){
+        return "North-West";
+    }
+    else if(position.x < 0 && position.y == 0){
+        return "West";
+    }
+    else if(position.x < 0 && position.y < 0){
+        return "South-West";
+    }
+    else if(position.x == 0 && position.y < 0){
+        return "South";
+    }
+    else if(position.x > 0 && position.y < 0){
+        return "South-East";
+    }
+    else if(position.x > 0 && position.y == 0){
+        return "East";
+    }
+    else if(position.x > 0 && position.y > 0){
+        return "North-East";
+    }
 }
 
 // Eat a rat and gain health (return value).
 int eat_rat(){
     return 0;
 }
+
 
 // Die and trigger game over.
 void die_of_scurvy(){
