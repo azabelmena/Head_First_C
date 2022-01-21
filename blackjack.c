@@ -29,13 +29,10 @@ void blackjack(){
 
         switch(card[0]){
             case 'A': // If card chosen is an ace:
-                char ace[2];
                 do{
                     printf("1 or 11?\t");
-                    scanf("%2s", ace);
-                }while(atoi(ace) != 1 && atoi(ace) != 11);
-
-                val = atoi(ace);
+                    scanf("%d", &val);
+                }while(val != 1 && val != 11);
 
                 break;
 
@@ -61,7 +58,7 @@ void blackjack(){
 
         // if the user accumulates over 21, stop game, they lose.
         if(count <= 21){
-            printf("Your count is %d, continue?\n");
+            printf("Your count is %d, continue?\n", count);
         }
         else{
             printf("You lose.\n");

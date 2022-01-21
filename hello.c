@@ -21,6 +21,23 @@ int main(){
 
     printf("%d\n", sizeof(s));
     printf("%d\n", sizeof(t));
+    printf("%x\n", &s);
+    printf("%x\n", &t);
+
+    int doses[] = {1, 2, 3, 1000};
+    printf("Issue dose %d\n", 0[doses]);
+    printf("Issue dose %d\n", 1[doses]);
+    printf("Issue dose %d\n", 2[doses]);
+    printf("Issue dose %d\n", 3[doses]);
+    printf("Issue dose %d\n", 4[doses]);
+
+    printf("Issue dose %d\n", *(doses));
+    printf("Issue dose %d\n", *(doses+1));
+    printf("Issue dose %d\n", *(doses+2));
+    printf("Issue dose %d\n", *(doses+3));
+    printf("Issue dose %d\n", *(doses+4));
+
+    printf("%d\n", doses[3] == 3[doses]);
 
     return 0;
 }
