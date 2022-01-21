@@ -16,5 +16,11 @@ int main(){
 
     printf("%d\n", n);
 
+    char s[] = "How big is it?";
+    char *t = s;
+
+    printf("%d\n", sizeof(s));
+    printf("%d\n", sizeof(t));
+
     return 0;
 }
