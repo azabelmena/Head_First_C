@@ -8,7 +8,7 @@ const int SIZE_2 = 80;
 // This takes a tracklist (string array) and a song (string). It searches for
 // the song in the tracklist using strstr. If the song is found, it returns the
 // song (and a value of true), else, it returns the null string, or just 0.
-char *find_song(char track[SIZE_1][SIZE_2], char *song){
+char *find_song(char *track[], char *song){
     for(int i = 0; i < SIZE_1 ; i++){
         if(strstr(track[i], song)){ // find song in track element i.
             return song; // if true, return song.
@@ -20,11 +20,13 @@ char *find_song(char track[SIZE_1][SIZE_2], char *song){
 
 int main(){
 
+
+
     // allocate 80 bytes for user input.
     char *song = malloc(SIZE_2*sizeof(char));
 
     // The track list.
-    char tracklist[5][80] = {"I left My Heart in Harvard Med",
+    char *tracklist[] = {"I Left My Heart in Harvard Med",
                              "Newark, Newark, A Wonderful Town",
                              "Dancing with A Dork",
                              "From Here to Maternity",
@@ -40,12 +42,7 @@ int main(){
 
     // Ask user input.
     printf("Which song would you like?\t");
-    fgets(song, 79, stdin);
-
-    // fgets automatically appends a new line, so replace it with \0.
-    // Not doing this gave me errors as song would always have \n at the last
-    // index.
-    song[strlen(song)-1] = '\0';
+    scanf("%79[^\n]s", song);
 
     // If the song is in the playlist, play it.
     // else, notify user of the song's absence.

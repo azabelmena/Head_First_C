@@ -1,0 +1,9 @@
+data = [
+latitude: 1.000000, longitude: 2.000000, info: 'Hi',
+latitude: 22.000000, longitude: 33.000000, info: 'Hello, World!',
+Missing data.
+latitude: 222.190000, longitude: 33.000000, info: 'Hello, WOlrd',
+Missing data.
+latitude: 33.000000, longitude: 222.190000, info: 'Hello, WOlrd',
+latitude: 41.233330, longitude: 22.112210, info: 'Speed = 5'
+]
