@@ -4,18 +4,25 @@
 
 const int SIZE = 80;
 
-int main(){
+int main(int argc, char *argv[]){
+
+    if(argc != 5){
+        fprintf(stderr, "Insufficient arguments.\n");
+        fprintf(stderr, "Usage: ./spooky <infile> <arg1> <arg2> <arg3>\n");
+
+        return 2;
+    }
 
     // allocate 80 chars to the line buffer.
     char *line = malloc(SIZE*sizeof(char));
 
     // Open spooky.csv for read only.
-    FILE *in = fopen("spooky.csv", "r");
+    FILE *in = fopen(argv[1], "r");
 
     // Create (if not present) and open files for write only.
-    FILE *file_1 = fopen("ufo.csv", "w");
-    FILE *file_2 = fopen("disappearances.csv", "w");
-    FILE *file_3 = fopen("other.csv", "w");
+    FILE *file_1 = fopen(argv[2], "w");
+    FILE *file_2 = fopen(argv[3], "w");
+    FILE *file_3 = fopen(argv[4], "w");
 
     // Scan each line of spooky.csv.
     while(fscanf(in, "%79[^\n]\n", line) == 1){
