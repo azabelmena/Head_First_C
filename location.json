@@ -1,9 +1,17 @@
 data = [
-latitude: 1.000000, longitude: 2.000000, info: 'Hi',
-latitude: 22.000000, longitude: 33.000000, info: 'Hello, World!',
-Missing data.
-latitude: 222.190000, longitude: 33.000000, info: 'Hello, WOlrd',
-Missing data.
-latitude: 33.000000, longitude: 222.190000, info: 'Hello, WOlrd',
-latitude: 41.233330, longitude: 22.112210, info: 'Speed = 5'
+latitude: 42.363327, longitude: 0.000000, info: 'Speed = 23 Type="UFO"',
+latitude: 42.363182, longitude: 0.000000, info: 'Speed = 22 Type="UFO"',
+latitude: 42.362965, longitude: 0.000000, info: 'Speed = 18 Type="UFO"',
+latitude: 42.362747, longitude: 0.000000, info: 'Speed = 23 Type="UFO"',
+latitude: 42.362602, longitude: 0.000000, info: 'Speed = 19 Type="UFO"',
+latitude: 42.362675, longitude: 0.000000, info: 'Speed = 14 Type="Elvis"',
+latitude: 42.363400, longitude: 0.000000, info: 'Speed = 21 Type="Mermaid"',
+latitude: 42.363255, longitude: 0.000000, info: 'Speed = 17 Type="Disappearance"',
+latitude: 42.363110, longitude: 0.000000, info: 'Speed = 14 Type="Goatsucker"',
+latitude: 42.363037, longitude: 0.000000, info: 'Speed = 16 Type="Disappearance"',
+latitude: 42.362892, longitude: 0.000000, info: 'Speed = 22 Type="Giant octopus"',
+latitude: 42.362820, longitude: 0.000000, info: 'Speed = 17 Type="Disappearance"',
+latitude: 42.362530, longitude: 0.000000, info: 'Speed = 16 Type="Disappearance"',
+latitude: 42.362457, longitude: 0.000000, info: 'Speed = 16 Type="Disappearance"',
+latitude: 42.362385, longitude: 0.000000, info: 'Speed = 21 Type="Yeti"'
 ]
