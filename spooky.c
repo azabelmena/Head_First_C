@@ -17,7 +17,13 @@ int main(int argc, char *argv[]){
     char *line = malloc(SIZE*sizeof(char));
 
     // Open spooky.csv for read only.
-    FILE *in = fopen(argv[1], "r");
+    FILE *in;
+    if(!(in = fopen(argv[1], "r"))){
+        fprintf(stderr, "Could not open file.\n");
+        fprintf(stderr, "Make sure file exists.\n");
+
+        return 2;
+    }
 
     // Create (if not present) and open files for write only.
     FILE *file_1 = fopen(argv[2], "w");
