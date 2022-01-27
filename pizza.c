@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
     }
 
     if(delivery[0]){
-        printf("Tone delivered: %s\n", delivery);
+        printf("To be delivered: %s\n", delivery);
     }
 
     printf("Ingredients: ");
